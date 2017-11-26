@@ -43,8 +43,8 @@ expdays         =   "90"
 
 4. Configure the Terraform-Wrapper-Script ``terraform-omnino.sh``
    1.  Add your AWS Access Credentials in order to work properly
-   2. Choose your Terraform Version (If not installed, it will be downloaded and installed)
-   3. Create an S3 Bucket manually, beforehand to store your Statefiles remotely
+   2.  Choose your Terraform Version (If not installed, it will be downloaded and installed)
+   3.  Create an S3 Bucket manually, beforehand to store your Statefiles remotely
       1. There will be one Statefile per Setup
       2. It's good practicise to have one bucket for staging/testing Setups and one Bucket for your live environment to prevent unwanted changes
 
@@ -54,12 +54,12 @@ expdays         =   "90"
 # ============================================================
 export AWS_ACCESS_KEY_ID='XXXXXXXXXX'  			# Your KEY
 export AWS_SECRET_ACCESS_KEY='XXXXXXXXX'		# Your Secret
-export AWS_REGION="us-east-1"					# Your working Region
+export AWS_REGION="us-east-1"				# Your working Region
 export TF_VAR_access_key=$AWS_ACCESS_KEY_ID
 export TF_VAR_secret_key=$AWS_SECRET_ACCESS_KEY
 export TF_VAR_region=$AWS_REGION
-TERRAFORM_VERSION='0.10.6'						# Your desired Terraform Version
-backendbucket="com.test.terraform.state.dev"	# Your Bucket to store all the Statefiles
+TERRAFORM_VERSION='0.10.6'					# Your desired Terraform Version
+backendbucket="com.test.terraform.state.dev"		# Your Bucket to store all the Statefiles
 backendregion="eu-west-1"
 ```
 
@@ -77,7 +77,7 @@ It's called alike `backend_<platform>-<stage>-<component>-<region>.tf` named jus
 6. The deployment will be done by calling the script with
 
 ```
-./terraform-omnion.sh -e <platform>-<stage>-<component>-<region> -a <Terraform action e.g. init>
+./terraform-omnino.sh -e <platform>-<stage>-<component>-<region> -a <Terraform action e.g. init>
 
 ./terraform-omnino.sh -e myproject-development-backup-eu-central-1 -a plan
 ```
