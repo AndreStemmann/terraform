@@ -58,7 +58,7 @@ export AWS_REGION="us-east-1"				# Your working Region
 export TF_VAR_access_key=$AWS_ACCESS_KEY_ID
 export TF_VAR_secret_key=$AWS_SECRET_ACCESS_KEY
 export TF_VAR_region=$AWS_REGION
-TERRAFORM_VERSION='0.10.6'					# Your desired Terraform Version
+TERRAFORM_VERSION='0.10.6'				# Your desired Terraform Version
 backendbucket="com.test.terraform.state.dev"		# Your Bucket to store all the Statefiles
 backendregion="eu-west-1"
 ```
