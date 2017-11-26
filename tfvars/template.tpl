@@ -1,0 +1,11 @@
+aws_account_id  =   "1234567890"
+platform        =   "projectx"
+stage           =   "development"
+component       =   "backup"
+region          =   "eu-central-1"
+filetype        =   "flatfiles"
+lifecyclename   =   "2days in s3, 30 days in IA"
+transdays       =   "2"
+storageclass    =   "STANDARD_IA"
+expdays         =   "30"
+
